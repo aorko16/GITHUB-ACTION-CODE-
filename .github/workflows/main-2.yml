@@ -1,0 +1,14 @@
+name: Secure Workflow 2
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@4
+
+      - name: Print Message
+        run: echo "Pinned version used"
