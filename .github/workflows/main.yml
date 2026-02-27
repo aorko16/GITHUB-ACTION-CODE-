@@ -1,4 +1,5 @@
-name: Variable-env and screate level 
+name: Variable-env and secret level
+
 on:
   push:
     paths:
@@ -17,9 +18,11 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
       - name: Print Variables
+        env:
+          My_Name: "Aorko"
         run: |
-         echo "Hello, My Name is ${{My_Name}}"
+          echo "Hello, My Name is $My_Name"
           echo "Message is $MESSAGE"
           echo "Environment is $ENV_NAME"
-
