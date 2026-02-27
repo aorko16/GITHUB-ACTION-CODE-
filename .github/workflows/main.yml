@@ -15,8 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
       - name: Print Variables
         run: |
          echo "Hello, My Name is ${{My_Name}}"
           echo "Message is $MESSAGE"
           echo "Environment is $ENV_NAME"
+
